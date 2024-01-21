@@ -1,0 +1,22 @@
+collections:
+  - projects
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+title: "Jort van Leenen"
+description: "Jort van Leenen's personal website"
+domain: "jortvanleenen.nl"
+url: "https://jortvanleenen.nl"
+baseurl: ""
+author: "Jort van Leenen"
+social:
+  name: Jort van Leenen
+  links:
+    - https://www.linkedin.com/in/jortvanleenen
+    - https://github.com/jortvanleenen/
+locale: en_GB
+
+permalink: /slugified_categories/:year/:i_month/:i_day/:slug
