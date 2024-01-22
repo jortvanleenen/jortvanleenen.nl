@@ -20,3 +20,7 @@ social:
 locale: en_GB
 
 permalink: /slugified_categories/:year/:i_month/:i_day/:slug
+
+exclude:
+  - LICENSE
+  - README.md
