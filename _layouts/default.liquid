@@ -2,7 +2,15 @@
 <html lang="{{ site.lang }}">
 <head>
     <meta charset="UTF-8">
-    {% seo %}
+    <title>
+        {% if page.title == nil or page.title == empty %}
+            {{ page.name | split: "." | first | capitalize }}
+        {% else %}
+            {{ page.title }}
+        {% endif %}
+        - {{ site.title }}
+    </title>
+    {% seo title = false %}
     {% feed_meta %}
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="icon"
