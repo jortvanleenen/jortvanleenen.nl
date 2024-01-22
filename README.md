@@ -1,16 +1,39 @@
 # [jortvanleenen.nl](https://jortvanleenen.nl) ([jortvanleenen.github.io](https://jortvanleenen.github.io))
+
 ## About
-This repository contains the source code for my personal website. It is built using [Jekyll](https://jekyllrb.com) and hosted on [GitHub Pages](https://pages.github.com/). The custom domain is registered with a Dutch registrar.
+
+This repository contains the source code for my personal website.
+It is built using [Jekyll](https://jekyllrb.com) and hosted on [GitHub Pages](https://pages.github.com/).
+The custom domain is registered with a Dutch registrar.
+
+## Implementation Details
+
+### Navigation Bar
+
+A page is added to the navigation bar when the `navbar_priority` variable is defined in its front matter.
+The priority value is considered a string and sorted as such alphabetically.
+The reason for this is that neither Liquid (nor Jekyll) provides an easy numerical sorting method.
+The sorted list of pages will be displayed in the navigation bar in the order of the sorted list.
+
+_Example:_ consider two items to be displayed in the navigation bar with the following priorities: `5` and `10`.
+The string `10` is alphabetically before `5`, so the item with the priority of `10` will be displayed first.
 
 ## License
-You are free to use the content of this repository for your own purposes, as long as you comply with the restrictions as imposed by the applied licenses described below.
 
-The textual content of this website, i.e. the information that can be read or heard through a web browsing application or similar, is licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-The source code, i.e. the formal language that specifies how the textual content, as described earlier, is conveyed, is licensed under the [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html); additionally, see the `LICENSE` file for the full deed.
+You are free to use the content of this repository for your own purposes, as long as you comply with the restrictions as
+imposed by the applied licenses described below.
 
-_As an example, the HTML markup of this website is licensed under the GNU GPLv3, while the textual content of the blog posts is licensed under the CC BY-SA 4.0._
+The textual content of this website, i.e. the information that can be read or heard through a web browsing application
+or similar, is licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The source code, i.e. the formal language that specifies how the textual content, as described earlier, is conveyed, is
+licensed under the [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html); additionally, see the `LICENSE` file for
+the full deed.
+
+_As an example, the HTML markup of this website is licensed under the GNU GPLv3, while the textual content of the blog
+posts is licensed under the CC BY-SA 4.0._
 
 ## Contributing
+
 If you have found a **typo, or another mistake**, please open an issue or submit a pull request.
 If you have a **question or suggestion**, feel free to open an issue.
 In all cases, you are welcome to send me an email instead.

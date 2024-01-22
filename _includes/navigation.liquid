@@ -1,0 +1,17 @@
+<nav>
+    {% assign navigation_pages = site.pages
+            | where_exp: "item", "item.navbar_priority != nil"
+            | sort_natural: "navbar_priority" %}
+    {% for navigation_page in navigation_pages %}
+        <a
+                href="{{ navigation_page.url }}"
+                {% if page.url == navigation_page.url %} style="color: darkgray;" {% endif %}
+        >
+            {% if navigation_page.title == nil or navigation_page.title == empty %}
+                {{ navigation_page.name | split: "." | first | capitalize }}
+            {% else %}
+                {{ navigation_page.title }}
+            {% endif %}
+        </a>
+    {% endfor %}
+</nav>

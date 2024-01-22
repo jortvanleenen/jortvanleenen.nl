@@ -17,10 +17,16 @@ social:
   links:
     - https://www.linkedin.com/in/jortvanleenen
     - https://github.com/jortvanleenen/
+lang: en-GB
 locale: en_GB
-
 permalink: /slugified_categories/:year/:i_month/:i_day/:slug
 
 exclude:
   - LICENSE
   - README.md
+
+defaults:
+  - scope:
+      path: "pages"
+    values:
+      layout: "default"
