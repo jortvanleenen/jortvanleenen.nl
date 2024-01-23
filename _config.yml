@@ -19,7 +19,7 @@ social:
     - https://github.com/jortvanleenen/
 lang: en-GB
 locale: en_GB
-permalink: /:slugified_categories/:year/:month/:day/:slug
+permalink: /:categories/:year/:month/:day/:slug
 
 exclude:
   - LICENSE
