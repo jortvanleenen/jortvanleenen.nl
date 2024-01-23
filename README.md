@@ -15,8 +15,8 @@ The priority value is considered a string and sorted as such alphabetically.
 The reason for this is that neither Liquid (nor Jekyll) provides an easy numerical sorting method.
 The sorted list of pages will be displayed in the navigation bar in the order of the sorted list.
 
-_Example:_ consider two items to be displayed in the navigation bar with the following priorities: `5` and `10`.
-The string `10` is alphabetically before `5`, so the item with the priority of `10` will be displayed first.
+_Example: consider two items to be displayed in the navigation bar with the following priorities: `5` and `10`.
+The string `10` is alphabetically before `5`, so the item with the priority of `10` will be displayed first._
 
 ## License
 
@@ -29,7 +29,7 @@ The source code, i.e. the formal language that specifies how the textual content
 licensed under the [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html); additionally, see the `LICENSE` file for
 the full deed.
 
-_As an example, the HTML markup of this website is licensed under the GNU GPLv3, while the textual content of the blog
+_Example: the HTML markup of this website is licensed under the GNU GPLv3, while the textual content of the blog
 posts is licensed under the CC BY-SA 4.0._
 
 ## Contributing
