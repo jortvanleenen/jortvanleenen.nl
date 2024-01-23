@@ -1,0 +1,42 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #eee;
+  --ternary-color: #ccc;
+}
+
+body {
+  color: var(--primary-color);
+}
+
+nav {
+  display: inline-block;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+
+    :hover {
+      background-color: var(--ternary-color);
+    }
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+header {
+  text-align: center;
+
+  nav {
+    display: inline-block;
+  }
+}
