@@ -12,6 +12,7 @@ domain: "jortvanleenen.nl"
 url: "https://jortvanleenen.nl"
 baseurl: ""
 author: "Jort van Leenen"
+email: "jort@vleenen.nl"
 social:
   name: Jort van Leenen
   links:

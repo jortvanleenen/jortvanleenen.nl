@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
-<head>
-    <meta charset="UTF-8">
-    <title>
+{% include head.liquid %}
+<body>
+{% include header.liquid %}
+<main>
+    <h2>
         {% if page.title == nil or page.title == empty %}
             {{ page.name | split: "." | first | capitalize }}
         {% else %}
             {{ page.title }}
         {% endif %}
-        - {{ site.title }}
-    </title>
-    {% seo title = false %}
-    {% feed_meta %}
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="icon"
-          href="data:image/svg+xml,
-              <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
-                <text y=%221em%22 font-size=%2280%22>🌐</text>
-              </svg>">
-</head>
-<body>
-{% include navigation.liquid %}
-<main>
+    </h2>
     {{ content }}
 </main>
+<hr>
+{% include footer.liquid %}
 </body>
 </html>
