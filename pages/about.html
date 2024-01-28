@@ -3,14 +3,37 @@ permalink: /
 
 navbar_priority: 0
 ---
-<aside>
-    <h2>Me</h2>
-    <p>This will feature information about me, such as contact details</p>
-    <address>
-        <dl>
-            <dt>Email</dt>
-            <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
-        </dl>
-    </address>
-</aside>
 <p>Exciting..., more to come when my spare time allows for it!</p>
+<p>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. sed euismod, nisl eget aliquam ultricies,
+    mauris nisl aliquet nunc, sit amet aliquam nisl nunc eu nisi. vivamus euismod, nisl eget aliquam ultricies,
+    mauris nisl aliquet nunc, sit amet aliquam nisl nunc eu nisi. vivamus euismod, nisl eget aliquam ultricies,
+</p>
+<div class="about">
+    <div>
+        <h3>CV</h3>
+        {% for topic in site.data.cv %}
+            <h4>{{ topic.title }}</h4>
+            <ul>
+                {% for unit in topic.content %}
+                    <ul>
+
+                    </ul>
+                    {% for item in unit %}
+                        <li><p>{{ item[0] }}: {{ item[1] }}</p></li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+    <aside>
+        <h3>Me</h3>
+        <p>This will feature information about me, such as contact details</p>
+        <address>
+            <dl>
+                <dt>Email</dt>
+                <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+            </dl>
+        </address>
+    </aside>
+</div>

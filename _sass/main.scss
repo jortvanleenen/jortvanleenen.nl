@@ -6,25 +6,37 @@
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
+  font-variation-settings: 'wght' 400;
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
 
-nav {
-  display: inline-block;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Code', 'Open Sans', serif;
+  font-variation-settings: 'wght' 650;
+}
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+menu li {
+  display: inline-block;
+  transition: font-variation-settings 125ms;
+
+  &:hover,
+  &.active {
+    font-variation-settings: 'wght' 600;
   }
 
-  li {
-    display: inline-block;
+  a::after {
+    content: attr(title);
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    font-variation-settings: 'wght' 600;
 
-    &:hover,
-    &.active {
-      background-color: var(--quaternary-color);
+    @media speech {
+      display: none;
     }
   }
 
@@ -32,29 +44,24 @@ nav {
     display: block;
     padding: 6px 12px;
     text-decoration: none;
-    color: inherit;
   }
 }
 
 .navbar {
   text-align: center;
+}
 
-  nav {
-    display: inline-block;
-  }
+
+a {
+  color: inherit;
+}
+
+header p {
+  color: var(--ternary-color);
 }
 
 aside {
   float: right;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fira Code', 'Open Sans', serif;
-  font-weight: bolder;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
 }
 
 a[href^="http"]::after,
@@ -100,4 +107,21 @@ dd {
 
 hr {
   color: var(--quaternary-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main > .about {
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+.wrapper {
+  max-width: 978px;
+  margin: 0 auto;
 }

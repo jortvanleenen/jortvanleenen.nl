@@ -4,15 +4,14 @@
                 | where_exp: "item", "item.navbar_priority != nil"
                 | sort_natural: "navbar_priority" %}
         {% for navigation_page in navigation_pages %}
+            {% assign navigation_page_title = navigation_page.title | default: navigation_page.name
+                    | split: "." | first | capitalize %}
             <li
+                    title="{{ navigation_page_title }}"
                     {% if navigation_page.url == page.url %} class="active"{% endif %}
             >
                 <a href="{{ navigation_page.url }}">
-                    {% if navigation_page.title == nil or navigation_page.title == empty %}
-                        {{ navigation_page.name | split: "." | first | capitalize }}
-                    {% else %}
-                        {{ navigation_page.title }}
-                    {% endif %}
+                    {{ navigation_page_title }}
                 </a>
             </li>
         {% endfor %}

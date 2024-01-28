@@ -3,7 +3,7 @@
 {% include head.liquid %}
 <body>
 {% include header.liquid %}
-<main>
+<main class="wrapper">
     <h2>
         {% if page.title == nil or page.title == empty %}
             {{ page.name | split: "." | first | capitalize }}
