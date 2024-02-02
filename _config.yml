@@ -3,8 +3,9 @@ collections:
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-target-blank
 
 title: "Jort van Leenen"
 description: "Jort van Leenen's personal website"
@@ -36,3 +37,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# jekyll-sass-converter (default in Jekyll gem)
+sass:
+  style: compressed
+
+# jekyll-target-blank
+target-blank:
+  add_css_classes: external
