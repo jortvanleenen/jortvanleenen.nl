@@ -32,7 +32,7 @@ jobs:
         with:
           urls: https://jortvanleenen.nl
           badges_args: '-b pagespeed -o .github/lighthouse-audit-results'
-          mobile_lighthouse_params: '--preset=mobile'
+          mobile_lighthouse_params: '--form-factor=mobile --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2 --throttling.cpuSlowdownMultiplier=2'
           desktop_lighthouse_params: '--preset=desktop'
           user_name: jortvanleenen
           user_email: jortvanleenen@users.noreply.github.com
