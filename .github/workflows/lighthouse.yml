@@ -21,6 +21,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - uses: actions/checkout@v4
+        with:
+          repository: 'myactionway/lighthouse-badges'
+          path: temp_lighthouse_badges_nested
+
       - name: Perform Lighthouse audit
         uses: myactionway/lighthouse-badger-action@v2.2
         with:
