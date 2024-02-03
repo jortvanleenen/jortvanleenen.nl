@@ -31,7 +31,7 @@ jobs:
         uses: myactionway/lighthouse-badger-action@v2.2
         with:
           urls: https://jortvanleenen.nl
-          badges_args: '-b pagespeed -o .github/lighthouse-audit-results --only-categories=performance,accessibility,best-practices,seo'
-          mobile_lighthouse_params: '--form-factor=mobile --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2 --throttling.cpuSlowdownMultiplier=2'
-          desktop_lighthouse_params: '--preset=desktop'
+          badges_args: '-b pagespeed -o .github/lighthouse-audit-results'
+          mobile_lighthouse_params: '--only-categories=accessibility,best-practices,performance,seo --form-factor=mobile --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2 --throttling.cpuSlowdownMultiplier=2'
+          desktop_lighthouse_params: '--only-categories=accessibility,best-practices,performance,seo --preset=desktop'
           commit_message: Update Lighthouse audit SVGs
