@@ -8,13 +8,13 @@ The custom domain is registered with a Dutch registrar.
 
 ### Lighthouse Audit
 
-| Desktop[^1]                                                 | Mobile[^2]                                                  |
+| Desktop[^1]                                                  | Mobile[^2]                                                  |
 | ------------------------------------------------------------ | ----------------------------------------------------------- |
 | ![](.github/lighthouse-audit-results/desktop/pagespeed.svg)  | ![](.github/lighthouse-audit-results/mobile/pagespeed.svg)  |
 
-[^1]: The desktop audit uses the following Lighthouse CLI options: `--preset=desktop`.
+[^1]: The desktop audit uses the following Lighthouse CLI options: `--preset=desktop --only-categories=performance,accessibility,best-practices,seo`.
 
-[^2]: The mobile audit uses the following Lighthouse CLI options: `-form-factor=mobile --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2 --throttling.cpuSlowdownMultiplier=2`.
+[^2]: The mobile audit uses the following Lighthouse CLI options: `-form-factor=mobile --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2 --throttling.cpuSlowdownMultiplier=2 --only-categories=performance,accessibility,best-practices,seo`.
 ## Implementation Details
 
 ### Navigation Bar
