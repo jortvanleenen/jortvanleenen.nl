@@ -8,9 +8,11 @@ The custom domain is registered with a Dutch registrar.
 
 ### Lighthouse Audit
 
-| Desktop[^1]                                                  | Mobile[^2]                                                  |
-| ------------------------------------------------------------ | ----------------------------------------------------------- |
-| ![](.github/lighthouse-audit-results/desktop/pagespeed.svg)  | ![](.github/lighthouse-audit-results/mobile/pagespeed.svg)  |
+| Desktop[^1] | Mobile[^2]  |
+| ----------- | ----------- |
+| [![Desktop Lighthouse audit](.github/lighthouse-audit-results/desktop/pagespeed.svg)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/jortvanleenen/jortvanleenen.github.io/main/.github/lighthouse-audit-results/desktop/jortvanleenen_nl.html)  | [![Mobile Lighthouse audit](.github/lighthouse-audit-results/mobile/pagespeed.svg)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/jortvanleenen/jortvanleenen.github.io/main/.github/lighthouse-audit-results/mobile/jortvanleenen_nl.html)  |
+
+[Run the Lighthouse audit yourself using Google PageSpeed Insights](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fjortvanleenen.nl%2F).
 
 [^1]: The desktop audit uses the following Lighthouse CLI options: `--preset=desktop --only-categories=accessibility,best-practices,performance,seo`.
 
