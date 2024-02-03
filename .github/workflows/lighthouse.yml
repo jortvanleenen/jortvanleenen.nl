@@ -32,6 +32,6 @@ jobs:
         with:
           urls: https://jortvanleenen.nl
           badges_args: '-b pagespeed -o .github/lighthouse-audit-results'
-          mobile_lighthouse_params: '--form-factor=mobile --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2 --throttling.cpuSlowdownMultiplier=2'
-          desktop_lighthouse_params: '--preset=desktop'
+          mobile_lighthouse_params: '--form-factor=mobile --screenEmulation.mobile --screenEmulation.width=360 --screenEmulation.height=640 --screenEmulation.deviceScaleFactor=2 --throttling.cpuSlowdownMultiplier=2 --only-categories=performance,accessibility,best-practices,seo'
+          desktop_lighthouse_params: '--preset=desktop --only-categories=performance,accessibility,best-practices,seo'
           commit_message: Update Lighthouse audit SVGs
