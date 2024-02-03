@@ -1,0 +1,27 @@
+name: Generate Lighthouse audit
+
+on:
+  deployment:
+  schedule:
+    - cron: '0 0 * * 0' # Every week (on Sunday, 00:00)
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Perform Lighthouse audit
+        uses: myactionway/lighthouse-badger-action@v2.2
+        with:
+          urls: https://jortvanleenen.nl
