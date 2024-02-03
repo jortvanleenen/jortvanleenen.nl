@@ -18,10 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Checkout repository
+      - name: Checkout this repository
         uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
+      - name: Checkout dependent repository for badge generation
+        uses: actions/checkout@v4
         with:
           repository: 'myactionway/lighthouse-badges'
           path: temp_lighthouse_badges_nested
@@ -30,3 +31,9 @@ jobs:
         uses: myactionway/lighthouse-badger-action@v2.2
         with:
           urls: https://jortvanleenen.nl
+          badges_args: '-b pagespeed -o .github/lighthouse-audit-results'
+          mobile_lighthouse_params: '--preset=mobile'
+          desktop_lighthouse_params: '--preset=desktop'
+          user_name: jortvanleenen
+          user_email: jortvanleenen@users.noreply.github.com
+          commit_message: Update Lighthouse audit SVGs
