@@ -3,7 +3,7 @@
 {% include head.liquid %}
 <body>
 {% include header.liquid %}
-<main class="wrapper">
+<main class="wrapper underline">
     <h2>
         {% if page.title == nil or page.title == empty %}
             {{ page.name | split: "." | first | capitalize }}
@@ -13,7 +13,6 @@
     </h2>
     {{ content }}
 </main>
-<hr>
 {% include footer.liquid %}
 </body>
 </html>

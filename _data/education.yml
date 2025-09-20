@@ -1,0 +1,94 @@
+body:
+  - position: Student Member
+    organisation: Programme Committee BSc CS and BSc DS & AI
+    start_date: 2021-11-01
+    end_date: 2023-09-01
+    description: |
+      Responsible for guaranteeing the quality of education, representing the interests of students and advising on and agreeing with plans from the programme board, the faculty and the Executive Board (CvB).
+
+  - position: Student Member
+    organisation: Sounding Board for Tuition Logistics
+    start_date: 2023-01-01
+    end_date: 2023-07-01
+    description: |
+      My primary responsibilities included sharing my experiences as a student and providing input on proposals related to scheduling and associated logistics (e.g., opening hours of campus facilities, such as restaurants).
+
+  - position: Student Member
+    organisation: Sounding Board for the Harmonisation Programme
+    start_date: 2022-01-01
+    end_date: 2023-08-01
+    description: |
+      Responsible for providing feedback and ideas to harmonise educational processes between the faculties of Leiden University, with the aim of giving students greater control over their studies. Main focus: testing and improving the digital student portal.
+
+student_assistant:
+  - position: Student Assistant
+    course: Foundations of Computer Science
+    start_date: 2025-09-01
+    end_date: 2026-01-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/131144/foundations-of-computer-science
+    responsibilities: |
+      Manage the course mailbox, answer questions online, grade exams
+
+  - position: Student Assistant
+    course: Logic 1
+    start_date: 2025-01-01
+    end_date: 2025-07-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/courses/123392/logic-1
+    responsibilities: |
+      Assist in the programming of a proof assistant
+    extra_info: |
+      <a href="https://liacs.leidenuniv.nl/~basoldh/education/proof-rondo/">The proof assistant is available online</a> and open-source.
+
+  - position: Student Assistant
+    course: Foundations of Computer Science
+    start_date: 2024-09-01
+    end_date: 2025-01-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/123388/foundations-of-computer-science
+    responsibilities: |
+      Hold office hours, assist in practicals, answer questions online, grade exams
+
+  - position: Student Assistant
+    course: Foundations of Computer Science
+    start_date: 2023-09-01
+    end_date: 2024-01-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/116580/foundations-of-computer-science
+    responsibilities: |
+      Improve course page (Brightspace) and material, answer questions online, assist in practicals, grade exams
+    extra_info: |
+      I wrote self-study quiz questions on the entire course content, which are still used today (as of October 2025).
+      Additionally, I transferred two lectures on graphs from PowerPoint to LaTeX Beamer, which are also still in use.
+
+  - position: Student Assistant
+    course: Databases
+    start_date: 2023-01-01
+    end_date: 2023-07-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/111486/databases
+    responsibilities: |
+      Improve course page (Brightspace) and material, answer questions online, assist in practicals, grade group projects and exams
+    extra_info: |
+      I wrote an exercise class from scratch on the Python interface for sqlite3, which is still used today (as of March 2024). <a href="https://files.jortvanleenen.nl/2023-Databases/">An open-access version of this exercise class is available<a/>.
+
+  - position: Student Assistant
+    course: Oriëntatie Informatica
+    start_date: 2022-11-01
+    end_date: 2023-01-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/114202/orientatie-informatica
+    responsibilities: |
+      Guide student projects, grade presentations and exams
+
+  - position: Student Assistant
+    course: Studying and Presenting
+    start_date: 2022-09-01
+    end_date: 2022-11-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/114204/studying-and-presenting
+    responsibilities: |
+      Grade and provide feedback on assignments (plannings, presentations, and reports)
+    extra_info: |
+      The paper I wrote was used as the example paper for the writing assignment.

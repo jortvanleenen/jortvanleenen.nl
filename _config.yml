@@ -1,31 +1,25 @@
-collections:
-  - projects
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-target-blank
-
-title: "Jort van Leenen"
-description: "Jort van Leenen's personal website"
-domain: "jortvanleenen.nl"
-url: "https://jortvanleenen.nl"
-baseurl: ""
-author: "Jort van Leenen"
+# Customs
 email: "jort@vleenen.nl"
-social:
-  name: Jort van Leenen
-  links:
-    - https://www.linkedin.com/in/jortvanleenen
-    - https://github.com/jortvanleenen/
-lang: en-GB
-locale: en_GB
-permalink: /:categories/:year/:month/:day/:slug
+github_username: jortvanleenen
+linkedin_username: jortvanleenen
+orcid_id: 0009-0005-9729-4600
 
+# Built-ins
 exclude:
   - LICENSE
   - README.md
+  - CNAME
+
+collections:
+  - news
+  - publications
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-target-blank
 
 defaults:
   - scope:
@@ -38,10 +32,46 @@ defaults:
     values:
       layout: "post"
 
+timezone: "Europe/Amsterdam"
+
+permalink: /:categories/:year/:month/:day/:slug
+
 # jekyll-sass-converter (default in Jekyll gem)
 sass:
   style: compressed
+  sourcemap: development
+
+# jekyll-feed
+title: "Jort van Leenen"
+description: "Jort van Leenen's personal website"
+url: "https://jortvanleenen.nl"
+feed:
+  collections:
+    - news
+    - publications
+
+# jekyll-seo-tag
+domain: "jortvanleenen.nl"
+author: "Jort van Leenen"
+social:
+  name: Jort van Leenen
+  links:
+    - https://www.linkedin.com/in/jortvanleenen
+    - https://github.com/jortvanleenen/
+    - https://orcid.org/0009-0005-9729-4600
+lang: en-GB
+locale: en_GB
 
 # jekyll-target-blank
 target-blank:
   add_css_classes: external
+
+# jekyll-paginate-v2
+pagination:
+  enabled: true
+  per_page: 5
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2

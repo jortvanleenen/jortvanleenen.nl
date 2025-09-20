@@ -1,11 +1,29 @@
-<header class="navbar">
-    <header class="wrapper">
-        <h1>Jort van Leenen</h1>
-        <p>
-            A computer science practitioner, passionate about the intricacies of foundational principles and
-            theoretical
-            frameworks and methods.
-        </p>
-    </header>
-    {% include navigation.liquid %}
+<header class="wrapper underline">
+    <div class="head">
+        <img class="head-img" src="/assets/img/profile.jpg" alt="Jort van Leenen's profile picture">
+        <div>
+            <h1>Jort van Leenen</h1>
+            <p class="subtitle">MSc Computer Science student @ Leiden University, The Netherlands</p>
+        </div>
+    </div>
+
+    <nav class="primary-nav" aria-label="Primary">
+        <menu class="nav-list">
+            {% assign navigation_pages = site.pages
+                    | where_exp: "p", "p.navbar_priority != nil and p.autogen == nil"
+                    | sort_numeric: "navbar_priority"
+                    | reverse %}
+            {% for navigation_page in navigation_pages %}
+                {% assign navigation_page_title = navigation_page.title | default: navigation_page.name
+                        | split: "." | first | capitalize %}
+                <li>
+                    <a href="{{ navigation_page.url }}"
+                       data-text="{{ navigation_page_title }}"
+                    {% if navigation_page.url == page.url %} aria-current="page" class="active"{% endif %}>
+                        {{ navigation_page_title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </menu>
+    </nav>
 </header>

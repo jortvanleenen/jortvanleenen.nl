@@ -1,0 +1,18 @@
+---
+title: 404 - Page Not Found
+permalink: /404.html
+---
+<p>
+    The page you were looking for could not be found.
+    If you believe this is an error,
+    <a href="{% link pages/about.liquid.html %}">please get in touch</a>.
+</p>
+
+{% highlight python %}
+try:
+    page = load("this_missing_page")
+except CoffeeError:
+    raise HTTPError(418, "I'm a teapot.")  # https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/418
+except Exception:
+    raise HTTPError(404, "Page not found.")
+{% endhighlight %}

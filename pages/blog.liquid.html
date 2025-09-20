@@ -1,11 +1,14 @@
 ---
 permalink: /blog
 
-navbar_priority: 2
+navbar_priority: 8
 ---
 <p>
-    On this page I write about things I find interesting. I hope you find them interesting too :).
+    I occasionally share articles about my projects, experiences, and insights in computer science and technology.
+    Below are some of my latest posts.
+    Feel free to get in touch with questions, collaboration ideas, or topics you would like me to cover!
 </p>
+<h3>Latest Posts</h3>
 {% for post in site.posts %}
     <article>
         <header>
@@ -15,4 +18,6 @@ navbar_priority: 2
         {{ post.excerpt }}
         <a href="{{ post.url }}">read more</a>
     </article>
+{% else %}
+    <p>No posts available at the moment.</p>
 {% endfor %}

@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #fcfcfc;
+  --ternary-color: #555;
+  --quaternary-color: #ddd;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  font-variation-settings: 'wght' 400;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Code', 'Lucida Console', serif;
+  font-variation-settings: 'wght' 650;
+}
+
+small {
+  color: var(--ternary-color);
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.underline {
+  border-bottom: 2px solid var(--quaternary-color);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--ternary-color);
+  margin-top: .5rem;
+}
+
+.container {
+  border: 2px solid var(--quaternary-color);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.bold {
+  font-variation-settings: 'wght' 700;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    filter: brightness(1.5);
+  }
+
+  &.external {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  &.external::after {
+    flex-shrink: 0;
+    content: "";
+    width: .7rem;
+    aspect-ratio: 1 / 1;
+    margin-left: 4px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23212121' d='M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+  }
+}
+
+small a.external::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23555' d='M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z'/%3E%3C/svg%3E");
+}
+
+button {
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  font-variation-settings: 'wght' 600;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--quaternary-color);
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  transition: filter .2s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+li {
+  margin-bottom: .5rem;
+}
