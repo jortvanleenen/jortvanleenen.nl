@@ -11,24 +11,25 @@ collection: news
 <div class="about-section">
     <article>
         <p>
-            Welcome to my personal website! I'm Jort van Leenen, a MSc Computer Science student at Leiden University,
-            The Netherlands.
+            Welcome to my personal website! I am Jort van Leenen, an MSc Computer Science student at Leiden University,
+            the Netherlands.
         </p>
         <p>
-            From 2021 to 2025, I studied Computer Science (Dutch: Informatica) at Leiden University. During the first
-            two years, I followed the regular curriculum. In my third year, I mainly took courses from the BSc Data
-            Science & Artificial Intelligence programme. In my fourth and final year, I completed my BSc in Computer
-            Science. Taking the additional third year was a valuable experience, giving me a broad understanding of said
-            field. I obtained my Bachelor's degree in 2025 at Leiden University.
+            From 2021 to 2025, I studied Computer Science ("Informatica") at Leiden University, within the
+            <a href="https://liacs.leidenuniv.nl/">Leiden Institute of Advanced Computer Science (LIACS)</a>.
+            During the first two years, I followed the standard curriculum. In my third year, I broadened my academic
+            focus by primarily taking extracurricular courses from the BSc Data Science & Artificial Intelligence
+            program. This provided a wide perspective on the field and allowed me to complete most AI-related courses
+            without overlap with my core curriculum. I obtained my Bachelor's degree in 2025.
         </p>
         <p>
-            I am passionate about theoretical computer science and its real-world applications. I am currently pursuing
-            the Foundations of Computing track of the MSc.
+            I am currently pursuing the Foundations of Computing specialisation within the MSc, a track centred on
+            theoretical computer science. My interests lie in the practical application of this theory, particularly in
+            software verification, model checking, automated reasoning, and proof assistants.
         </p>
         <p>
-            Feel free to explore my website to learn more about my projects, skills, and experiences. If you have any
-            questions or would like to get in touch, please don't hesitate to contact me using the information provided
-            in the sidebar.
+            This website provides an overview of my projects, skills, and experience. For further information or
+            enquiries, please use the contact details provided in the sidebar.
         </p>
     </article>
     <aside class="container">
@@ -80,49 +81,6 @@ collection: news
 </div>
 
 <script>
-    (function () {
-        const root = document.getElementById('news-root');
-        const moreBtn = document.getElementById('news-more');
-        let nextUrl = '{{ "/api/news/feed-1.json" | relative_url }}';
-
-        function formatDateParts(iso) {
-            const d = new Date(iso);
-            const top = d.toLocaleDateString('en-GB', {day: 'numeric', month: 'long'}); // e.g., "6 September"
-            const bottom = d.getFullYear();
-            return {top, bottom};
-        }
-
-        function renderItem(item) {
-            const {top, bottom} = formatDateParts(item.date);
-            const el = document.createElement('div');
-            el.className = 'news-item';
-            el.innerHTML = `
-      <div class="date">
-        <span class="bottom">${bottom}</span>
-        <span class="top">${top}</span>
-      </div>
-      <div>
-        <p class="bold">${item.title}</p>
-        <div>${item.content}</div>
-      </div>`;
-            root.appendChild(el);
-        }
-
-        async function loadFeed(url) {
-            if (!url) return;
-            const res = await fetch(url, {headers: {'Accept': 'application/json'}});
-            if (!res.ok) throw new Error('Failed to load news feed');
-            const data = await res.json();
-
-            (data.items || []).forEach(renderItem);
-
-            nextUrl = data.next || null;
-            moreBtn.hidden = !nextUrl;
-        }
-
-        moreBtn.addEventListener('click', () => loadFeed(nextUrl));
-
-        // Initial load
-        loadFeed(nextUrl).catch(console.error);
-    })();
+    globalThis.NEWS_FEED_URL = '{{ "/api/news/feed-1.json" | relative_url }}';
 </script>
+<script type="module" src="{{ '/assets/js/news.js' | relative_url }}"></script>

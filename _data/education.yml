@@ -1,10 +1,17 @@
 body:
+  - position: Chief Technology Officer
+    organisation: LUdev
+    start_date: 2025-09-01
+    end_date: 2026-06-30
+    description: |
+      <a href="https://ludev.nl/">LUdev</a> is an organization part of <a href="https://liacs.leidenuniv.nl/">LIACS</a> that is responsible for the acquisition of software development projects for third-year BSc students Computer Science (incl. Bioinformatica, and Computer Science & Business), and Data Science & Artificial Intelligence. Within its student board, I am primarily responsible for all technical aspects, such as our own infrastructure and project feasibility.
+
   - position: Student Member
-    organisation: Programme Committee BSc CS and BSc DS & AI
+    organisation: Program Committee BSc CS and BSc DS & AI
     start_date: 2021-11-01
     end_date: 2023-09-01
     description: |
-      Responsible for guaranteeing the quality of education, representing the interests of students and advising on and agreeing with plans from the programme board, the faculty and the Executive Board (CvB).
+      Responsible for guaranteeing the quality of education, representing the interests of students and advising on and agreeing with plans from the program board, the faculty and the Executive Board (CvB).
 
   - position: Student Member
     organisation: Sounding Board for Tuition Logistics
@@ -14,13 +21,22 @@ body:
       My primary responsibilities included sharing my experiences as a student and providing input on proposals related to scheduling and associated logistics (e.g., opening hours of campus facilities, such as restaurants).
 
   - position: Student Member
-    organisation: Sounding Board for the Harmonisation Programme
+    organisation: Sounding Board for the Harmonization Program
     start_date: 2022-01-01
     end_date: 2023-08-01
     description: |
-      Responsible for providing feedback and ideas to harmonise educational processes between the faculties of Leiden University, with the aim of giving students greater control over their studies. Main focus: testing and improving the digital student portal.
+      Responsible for providing feedback and ideas to harmonize educational processes between the faculties of Leiden University, with the aim of giving students greater control over their studies. Main focus: testing and improving the digital student portal.
 
 student_assistant:
+  - position: Student Assistant
+    course: Software Engineering
+    start_date: 2025-01-01
+    end_date: 2026-07-01
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/courses/131070/software-engineering
+    responsibilities: |
+      Mentor students in the development of their software project
+
   - position: Student Assistant
     course: Foundations of Computer Science
     start_date: 2025-09-01
@@ -37,7 +53,7 @@ student_assistant:
     level: BSc
     study_guide_link: https://studiegids.universiteitleiden.nl/courses/123392/logic-1
     responsibilities: |
-      Assist in the programming of a proof assistant
+      Assist in the programming of a first-order logic (FOL) proof assistant
     extra_info: |
       <a href="https://liacs.leidenuniv.nl/~basoldh/education/proof-rondo/">The proof assistant is available online</a> and open-source.
 
