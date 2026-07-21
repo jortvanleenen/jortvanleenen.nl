@@ -33,7 +33,7 @@ student_assistant:
     start_date: 2025-01-01
     end_date: 2026-07-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/courses/131070/software-engineering
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/courses/131070/software-engineering
     responsibilities: |
       Mentor students in the development of their software project
 
@@ -42,7 +42,7 @@ student_assistant:
     start_date: 2025-09-01
     end_date: 2026-01-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/131144/foundations-of-computer-science
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/en/courses/131144/foundations-of-computer-science
     responsibilities: |
       Manage the course mailbox, answer questions online, grade exams
 
@@ -51,7 +51,7 @@ student_assistant:
     start_date: 2025-01-01
     end_date: 2025-07-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/courses/123392/logic-1
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/courses/123392/logic-1
     responsibilities: |
       Assist in the programming of a first-order logic (FOL) proof assistant
     extra_info: |
@@ -62,7 +62,7 @@ student_assistant:
     start_date: 2024-09-01
     end_date: 2025-01-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/123388/foundations-of-computer-science
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/en/courses/123388/foundations-of-computer-science
     responsibilities: |
       Hold office hours, assist in practicals, answer questions online, grade exams
 
@@ -71,7 +71,7 @@ student_assistant:
     start_date: 2023-09-01
     end_date: 2024-01-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/116580/foundations-of-computer-science
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/en/courses/116580/foundations-of-computer-science
     responsibilities: |
       Improve course page (Brightspace) and material, answer questions online, assist in practicals, grade exams
     extra_info: |
@@ -83,7 +83,7 @@ student_assistant:
     start_date: 2023-01-01
     end_date: 2023-07-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/111486/databases
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/en/courses/111486/databases
     responsibilities: |
       Improve course page (Brightspace) and material, answer questions online, assist in practicals, grade group projects and exams
     extra_info: |
@@ -94,7 +94,7 @@ student_assistant:
     start_date: 2022-11-01
     end_date: 2023-01-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/114202/orientatie-informatica
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/en/courses/114202/orientatie-informatica
     responsibilities: |
       Guide student projects, grade presentations and exams
 
@@ -103,7 +103,7 @@ student_assistant:
     start_date: 2022-09-01
     end_date: 2022-11-01
     level: BSc
-    study_guide_link: https://studiegids.universiteitleiden.nl/en/courses/114204/studying-and-presenting
+    study_guide_link: https://studiegids-archief.leidenuniv.nl/en/courses/114204/studying-and-presenting
     responsibilities: |
       Grade and provide feedback on assignments (plannings, presentations, and reports)
     extra_info: |
