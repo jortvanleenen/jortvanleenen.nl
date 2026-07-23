@@ -1,0 +1,17 @@
+- title: "Octopus: Practical Equivalence Checking of P4 Packet Parsers"
+  doi: https://doi.org/10.1007/978-3-032-32519-8_11
+  authors:
+    - name: Jort van Leenen
+    - name: Tobias Kappé
+      link: https://tobias.kap.pe
+  venue: Computer Aided Verification (CAV 2026)
+  venue_link: https://conferences.i-cav.org/2026/
+  part: Part I
+  series: Lecture Notes in Computer Science (LNCS)
+  publisher: Springer
+  pages: 198–211
+  year: 2026
+  location: Lisbon, Portugal
+  dates: 26–29 July 2026
+  badges:
+    - Open Access

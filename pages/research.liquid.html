@@ -26,6 +26,27 @@ navbar_priority: 4
     </a>
 </p>
 <h3>Publications</h3>
-<p>
-    I do not yet have any publications to list here, but I hope to change that in the near future.
-</p>
+<ul>
+    {% for pub in site.data.publications %}
+        <li>
+            <a href="{{ pub.doi }}">{{ pub.title }}</a>
+            {% if pub.badges %}
+                {% for badge in pub.badges %}
+                    <span class="badge">{{ badge }}</span>
+                {% endfor %}
+            {% endif %}
+            <br>
+            <small>
+                {% for author in pub.authors %}
+                    {% if author.link %}<a href="{{ author.link }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+            </small>
+            <br>
+            <small>
+                {% if pub.venue_link %}<a href="{{ pub.venue_link }}">{{ pub.venue }}</a>{% else %}{{ pub.venue }}{% endif %}{% if pub.part %}, {{ pub.part }}{% endif %},
+                {{ pub.series }}, pp. {{ pub.pages }}, {{ pub.publisher }}, {{ pub.year }}.
+                {{ pub.location }}, {{ pub.dates }}.
+            </small>
+        </li>
+    {% endfor %}
+</ul>

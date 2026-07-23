@@ -3,3 +3,15 @@
   font-style: normal;
   margin-right: .5rem;
 }
+
+.badge {
+  display: inline-block;
+  font-size: .75rem;
+  font-variation-settings: 'wght' 600;
+  color: var(--ternary-color);
+  border: 2px solid var(--quaternary-color);
+  border-radius: 1rem;
+  padding: .1rem .6rem;
+  margin-left: .35rem;
+  vertical-align: middle;
+}
