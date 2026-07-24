@@ -54,15 +54,9 @@ a {
     filter: brightness(1.5);
   }
 
-  &.external {
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-  }
-
   &.external::after {
-    flex-shrink: 0;
     content: "";
+    display: inline-block;
     width: .7rem;
     aspect-ratio: 1 / 1;
     margin-left: 4px;
@@ -70,7 +64,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    display: inline-block;
   }
 }
 
