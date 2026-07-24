@@ -54,15 +54,26 @@ aside {
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: max-content auto;
-  column-gap: .5rem;
-  margin-top: .25rem;
-  margin-bottom: 0;
-  align-items: center;
+  list-style: none;
+  margin: .25rem 0 0;
+  padding: 0;
 
-  dd {
-    margin: 0;
+  a {
+    display: flex;
+    align-items: center;
   }
 }
 
+.contact-grid .svg-container {
+  margin-right: .5rem;
+}
+
+.contact-grid a {
+  &:hover {
+    filter: none;
+  }
+
+  &:hover .label {
+    filter: brightness(1.5);
+  }
+}
