@@ -29,13 +29,20 @@ navbar_priority: 4
 <ul>
     {% for pub in site.data.publications %}
         <li>
-            <a href="{{ pub.doi }}">{{ pub.title }}</a>
-            {% if pub.badges %}
-                {% for badge in pub.badges %}
-                    <span class="badge">{{ badge }}</span>
-                {% endfor %}
-            {% endif %}
-            <br>
+            <div class="pub-header">
+                <a href="{{ pub.doi }}">{{ pub.title }}</a>
+                {% if pub.badges %}
+                    {% for badge in pub.badges %}
+                        <span class="badge">
+                            {% if badge.icon %}
+                                {% assign badge_icon_file = badge.icon | prepend: "badges/" | append: ".svg" %}
+                                {% include {{ badge_icon_file }} %}
+                            {% endif %}
+                            {{ badge.label }}
+                        </span>
+                    {% endfor %}
+                {% endif %}
+            </div>
             <small>
                 {% for author in pub.authors %}
                     {% if author.link %}<a href="{{ author.link }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}

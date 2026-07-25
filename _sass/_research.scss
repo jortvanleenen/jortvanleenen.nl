@@ -4,14 +4,27 @@
   margin-right: .5rem;
 }
 
+.pub-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+
 .badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
   font-size: .75rem;
   font-variation-settings: 'wght' 600;
   color: var(--ternary-color);
   border: 2px solid var(--quaternary-color);
   border-radius: 1rem;
   padding: .1rem .6rem;
-  margin-left: .35rem;
-  vertical-align: middle;
+}
+
+.badge-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
 }
