@@ -107,12 +107,14 @@ description: I am Jort van Leenen, an MSc Computer Science student at Leiden Uni
             </div>
         {% endfor %}
     </div>
-    <button id="news-more" type="button"{% unless sorted_news.size > per_page %} hidden{% endunless %}>Load more</button>
+    <button id="news-more" type="button"{% unless sorted_news.size > per_page %} hidden{% endunless %}>
+        Load more
+    </button>
 </div>
 
 <script>
     {% if sorted_news.size > per_page %}
-        globalThis.NEWS_FEED_URL = '{{ "/api/news/feed-2.json" | relative_url }}';
+    globalThis.NEWS_FEED_URL = '{{ "/api/news/feed-2.json" | relative_url }}';
     {% endif %}
 </script>
 <script type="module" src="{{ '/assets/js/news.js' | relative_url }}"></script>
