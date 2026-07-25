@@ -50,10 +50,3 @@ async function loadFeed(url) {
 }
 
 moreBtn.addEventListener('click', () => loadFeed(nextUrl));
-
-// Initial load
-try {
-    await loadFeed(nextUrl);
-} catch (e) {
-    console.error(e);
-}

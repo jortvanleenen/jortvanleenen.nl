@@ -3,10 +3,6 @@ permalink: /
 
 navbar_priority: 10
 
-pagination:
-enabled: true
-collection: news
-
 title: ''
 description: I am Jort van Leenen, an MSc Computer Science student at Leiden University, the Netherlands. From 2021 to 2025, I studied Computer Science ("Informatica") at Leiden University, within the Leiden Institute of Advanced Computer Science (LIACS).
 ---
@@ -93,13 +89,30 @@ description: I am Jort van Leenen, an MSc Computer Science student at Leiden Uni
     </aside>
 </div>
 
+{% assign per_page = site.pagination.per_page | default: 5 %}
+{% assign sorted_news = site.news | sort: "date" | reverse %}
 <div>
     <h2>News</h2>
-    <div id="news-root" class="news-grid"></div>
-    <button id="news-more" type="button" hidden>Load more</button>
+    <div id="news-root" class="news-grid">
+        {% for item in sorted_news limit: per_page %}
+            <div class="news-item">
+                <div class="date">
+                    <span class="top">{{ item.date | date: "%Y" }}</span>
+                    <span class="bottom">{{ item.date | date: "%-d %b" }}.</span>
+                </div>
+                <div>
+                    <p class="bold">{{ item.title }}</p>
+                    <div>{{ item.content | markdownify }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <button id="news-more" type="button"{% unless sorted_news.size > per_page %} hidden{% endunless %}>Load more</button>
 </div>
 
 <script>
-    globalThis.NEWS_FEED_URL = '{{ "/api/news/feed-1.json" | relative_url }}';
+    {% if sorted_news.size > per_page %}
+        globalThis.NEWS_FEED_URL = '{{ "/api/news/feed-2.json" | relative_url }}';
+    {% endif %}
 </script>
 <script type="module" src="{{ '/assets/js/news.js' | relative_url }}"></script>
