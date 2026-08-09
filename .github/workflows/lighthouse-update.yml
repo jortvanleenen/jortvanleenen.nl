@@ -1,7 +1,7 @@
 name: Generate Lighthouse audit
 
 on:
-  deployment:
+  deployment_status:
   schedule:
     - cron: '0 0 * * 0' # Every week (on Sunday, 00:00)
   workflow_dispatch:
@@ -15,20 +15,21 @@ permissions:
 
 jobs:
   generate:
+    if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
       - name: Checkout this repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Checkout dependent repository for badge generation
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: 'myactionway/lighthouse-badges'
           path: temp_lighthouse_badges_nested
 
       - name: Perform Lighthouse audit
-        uses: myactionway/lighthouse-badger-action@v2.2
+        uses: myactionway/lighthouse-badger-action@0064f8e52023fe836d42f65e71231c54a93f7d0b #v2.2
         with:
           urls: https://jortvanleenen.nl
           badges_args: '-b pagespeed -o .github/lighthouse-audit-results -r'
