@@ -4,7 +4,7 @@ body:
     start_date: 2025-09-01
     end_date: 2026-06-30
     description: |
-      <a href="https://ludev.nl/">LUdev</a> is an organization part of <a href="https://liacs.leidenuniv.nl/">LIACS</a> that is responsible for the acquisition of software development projects for third-year BSc students Computer Science (incl. Bioinformatica, and Computer Science & Business), and Data Science & Artificial Intelligence. Within its student board, I am primarily responsible for all technical aspects, such as our own infrastructure and project feasibility.
+      <a href="https://ludev.nl/">LUdev</a> is an organization part of <a href="https://liacs.leidenuniv.nl/">LIACS</a> that is responsible for the acquisition of software development projects for third-year BSc students Computer Science (incl. Bioinformatica, and Computer Science & Business), and Data Science & Artificial Intelligence. Within its student board, I am primarily responsible for all technical aspects, such as our own infrastructure and project's technical feasibility.
 
   - position: Student Member
     organisation: Program Committee BSc CS and BSc DS & AI
