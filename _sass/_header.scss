@@ -27,17 +27,21 @@
 
   li a {
     display: inline-flex;
+    align-items: center;
     text-decoration: none;
     transition: font-variation-settings 125ms;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     padding: .5rem 1rem .5rem;
 
     &:hover,
     &.active {
       font-variation-settings: 'wght' 600;
     }
+  }
+
+  .nav-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 
     &::after {
       content: attr(data-text);

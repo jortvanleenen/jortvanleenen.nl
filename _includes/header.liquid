@@ -18,12 +18,20 @@
                         | split: "." | first | capitalize %}
                 <li>
                     <a href="{{ navigation_page.url }}"
-                       data-text="{{ navigation_page_title }}"
                     {% if navigation_page.url == page.url %} aria-current="page" class="active"{% endif %}>
-                        {{ navigation_page_title }}
+                        <span class="nav-text" data-text="{{ navigation_page_title }}">{{ navigation_page_title }}</span>
                     </a>
                 </li>
             {% endfor %}
+            {% if site.data.navigation and site.data.navigation.size > 0 %}
+                {% for navigation_item in site.data.navigation %}
+                    <li>
+                        <a href="{{ navigation_item.url }}">
+                            <span class="nav-text" data-text="{{ navigation_item.title }}">{{ navigation_item.title }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
         </menu>
     </nav>
 </header>
