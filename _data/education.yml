@@ -1,10 +1,22 @@
 body:
+  - position: Student Ambassador
+    organisation: Leiden University
+    start_date: 2026-08-31
+    description: |
+      As a student ambassador for the MSc Computer Science programme and its specialisations, I represent the programme to prospective students and other interested parties, sharing my experiences, answering questions, and providing an honest perspective on student life and studying in Leiden.
+
+  - position: Chief Executive Officer
+    organisation: LUdev
+    start_date: 2026-08-31
+    description: |
+      <a href="https://ludev.nl/">LUdev</a> connects Leiden University Computer Science students with real-world software projects. I am responsible for the overall business operations and strategic direction, as well as project development, organisational management, and external partnerships.
+
   - position: Chief Technology Officer
     organisation: LUdev
     start_date: 2025-09-01
-    end_date: 2026-06-30
+    end_date: 2026-08-30
     description: |
-      <a href="https://ludev.nl/">LUdev</a> is an organization part of <a href="https://liacs.leidenuniv.nl/">LIACS</a> that is responsible for the acquisition of software development projects for third-year BSc students Computer Science (incl. Bioinformatica, and Computer Science & Business), and Data Science & Artificial Intelligence. Within its student board, I am primarily responsible for all technical aspects, such as our own infrastructure and project's technical feasibility.
+      <a href="https://ludev.nl/">LUdev</a> connects Leiden University Computer Science students with real-world software projects. I was primarily responsible for all technical aspects, such as our infrastructure and projects' technical feasibility.
 
   - position: Student Member
     organisation: Program Committee BSc CS and BSc DS & AI
@@ -29,6 +41,14 @@ body:
 
 student_assistant:
   - position: Student Assistant
+    course: Foundations of Computer Science
+    start_date: 2026-08-31
+    level: BSc
+    study_guide_link: https://studiegids.universiteitleiden.nl/modules/4031FDCX6Y?year=2261&tab=info&type=DEFAULT
+    responsibilities: |
+      Manage the course mailbox, answer questions online, grade assignments and exams
+
+  - position: Student Assistant
     course: Software Engineering
     start_date: 2025-01-01
     end_date: 2026-07-01
@@ -44,7 +64,7 @@ student_assistant:
     level: BSc
     study_guide_link: https://studiegids-archief.leidenuniv.nl/en/courses/131144/foundations-of-computer-science
     responsibilities: |
-      Manage the course mailbox, answer questions online, grade exams
+      Manage the course mailbox, answer questions online, grade assignments and exams
 
   - position: Student Assistant
     course: Logic 1
@@ -75,8 +95,8 @@ student_assistant:
     responsibilities: |
       Improve course page (Brightspace) and material, answer questions online, assist in practicals, grade exams
     extra_info: |
-      I wrote self-study quiz questions on the entire course content, which are still used today (as of October 2025).
-      Additionally, I transferred two lectures on graphs from PowerPoint to LaTeX Beamer, which are also still in use.
+      I wrote self-study quiz questions on the entire course content, which were used until 2026.
+      Additionally, I transferred two lectures on graph theory from PowerPoint to LaTeX Beamer, parts of which are still used (as of August 2026).
 
   - position: Student Assistant
     course: Databases

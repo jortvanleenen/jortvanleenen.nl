@@ -73,3 +73,30 @@ navbar_priority: 4
         </li>
     {% endfor %}
 </ul>
+<h3>Awards</h3>
+<ul class="publications-list">
+    {% for award in site.data.awards %}
+        <li>
+            <div class="pub-header">
+                <span class="bold">{{ award.title }}</span>
+            </div>
+            <small>
+                {% if award.event_link %}<a
+                    href="{{ award.event_link }}">{{ award.event }}</a>{% else %}{{ award.event }}{% endif %},
+                {{ award.location }}, {{ award.date | date: "%B %Y" }}.
+            </small>
+            {% if award.description %}
+                <p style="font-style: italic; margin: .25rem 0;">
+                    {{ award.description }}
+                </p>
+            {% endif %}
+            {% if award.links %}
+                <div class="pub-links">
+                    {% for link in award.links %}
+                        <a class="pub-link" href="{{ link.url }}">{{ link.label }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

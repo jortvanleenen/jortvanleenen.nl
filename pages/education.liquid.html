@@ -6,8 +6,8 @@ navbar_priority: 6
 
 <p>
     I have been an active member of the academic community at Leiden University since the start of my studies.
-    I have participated in various student bodies, and worked as an assistant for multiple courses.
-    For a full overview of my academic involvement, see below.
+    I have participated in various student bodies and other institutional roles, and worked as an assistant for
+    multiple courses. For a full overview of my academic involvement, see below.
 </p>
 
 <h3>Student Assistant</h3>
@@ -17,7 +17,7 @@ navbar_priority: 6
             {{ sa.position }} &mdash; <a href="{{ sa.study_guide_link }}">{{ sa.course }}</a>
             {% if sa.level %}<small>({{ sa.level }})</small>{% endif %}
             <br>
-            <small>{{ sa.start_date | date: "%B %Y" }} &ndash; {{ sa.end_date | date: "%B %Y" }}</small>
+            <small>{{ sa.start_date | date: "%B %Y" }} &ndash; {% if sa.end_date %}{{ sa.end_date | date: "%B %Y" }}{% else %}Present{% endif %}</small>
             {% if sa.responsibilities %}
                 <p style="margin: .25rem 0;">
                     <span style="font-variation-settings: 'wght' 600;">Responsibilities: </span>
@@ -34,13 +34,13 @@ navbar_priority: 6
     {% endfor %}
 </ul>
 
-<h3>Bodies</h3>
+<h3>Roles</h3>
 <ul>
     {% for role in site.data.education.body %}
         <li>
             {{ role.position }} &mdash; {{ role.organisation }}
             <br>
-            <small>{{ role.start_date | date: "%B %Y" }} &ndash; {{ role.end_date | date: "%B %Y" }}</small>
+            <small>{{ role.start_date | date: "%B %Y" }} &ndash; {% if role.end_date %}{{ role.end_date | date: "%B %Y" }}{% else %}Present{% endif %}</small>
             {% if role.description %}
                 <p style="font-style: italic; margin: .25rem 0;">
                     {{ role.description }}

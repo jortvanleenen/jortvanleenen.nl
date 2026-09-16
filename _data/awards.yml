@@ -1,0 +1,14 @@
+- title: "1st Place, 9th AI Settlement Generation Challenge (GDMC)"
+  event: IEEE Conference on Games (CoG 2026)
+  event_link: https://cog2026.org
+  location: Madrid, Spain
+  date: 2026-09-04
+  description: |
+    Competing as team <strong>Merge Conflict</strong> together with Robert Salden, Lana van Sprang, Niels Versteeg,
+    and Jasper van der Zwet, our AI-driven Minecraft settlement generator achieved the highest overall score in
+    the competition, including the highest aesthetics score ever awarded in the challenge's history. The project was
+    developed as part of <a href="https://www.universiteitleiden.nl/en/staffmembers/mike-preuss">Mike Preuss</a>'s
+    Modern Game AI course at LIACS.
+  links:
+    - label: Competition
+      url: https://gendesignmc.wikidot.com/
